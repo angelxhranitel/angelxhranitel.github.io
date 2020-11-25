@@ -16,20 +16,27 @@
   </head>
   <body>
       <style>
+		  .text{
+			  width: 60%;
+		  }
+		  .btn{
+			  width: 350px;
+			  left: 0%;
+			  margin:5% auto 0 auto;
+			  
+		  }
 	   @media screen and (max-width: 980px){
 		   body{
-			    background-image: url('img/purple.png');
+			    background-image: url('img/red1.png');
 			}
 	   }
    </style>
     <header>
             <div class="container-fluid">
         <div class="text">
-            <h3>Ответ неверный!</h3>
+            <h3>Правильно!</h3>
             <div class="ball">Баллы:<label id="lblScore"></label></div>
-        <p>Хочешь попробовать свои силы на фиолетовом уровне?</p>
-            <button id="btnOk" class="btn btnConf" >ДА</button>
-            <button id="btnNo" class="btn btnNope" >Нет</button>
+            <button id="btnOk" class="btn btnConf" >Следующий уровень</button>
             <p></p>
        </div>
 
@@ -61,22 +68,17 @@
   <script>new WOW().init();</script>
   
 
-                <!--Рандом уровня для фиолетового-->
+                <!--Рандом уровня для красного-->
 <script type="text/javascript">
         var Score = window.location.hash.substring(1);
         function GetIntRandom(min,max){
         return Math.floor(Math.random() * (max-min+1))+min;
         }
     $('#btnOk').click(function(){
-     window.location.href = GetIntRandom(51,55)/10+'.P.html' + '#' + Score;  
+     window.location.href = GetIntRandom(51,55)/10+'.R.html' + '#' + Score;  
     });
 </script>
                         <!--Переход на главную-->
-<script type="text/javascript">
-    $('#btnNo').click(function(){
-     window.location.href = 'index.html';  
-    });
-</script>
 
 
    <script type="text/javascript">

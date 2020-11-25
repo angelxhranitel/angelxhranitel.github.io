@@ -75,7 +75,7 @@
         $('#button').click(function(){
             if($('#answer').val()==answ){
                 Score = Score+5;
-                window.location.href = GetIntRandom(21,25)/10+'.R.html' + '#' + Score;
+                window.location.href = 'transportR1.html' + '#' + Score;
                 }
             
                 else if($('#answer').val()==nul){
@@ -91,7 +91,7 @@
                 }
             
                 else{
-                window.location.href = 'transportR1.html' + '#' + Score;
+                window.location.href = 'transportRd1.html' + '#' + Score;
                 }
                 var lblScore = Document.getElementbyId('lblScore');
                 lblScore.innerHTML=Score;

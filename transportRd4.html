@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,35 +8,32 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/levels.css">
+    <link rel="stylesheet" href="css/transport.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
 
     <title>Game</title>
   </head>
   <body>
-   <style>
-       body{
-           background-image: url(img/4.jpg);
-       }
-
-      </style>
+      <style>
+	   @media screen and (max-width: 980px){
+		   body{
+			    background-image: url('img/purple.png');
+			}
+	   }
+   </style>
     <header>
-    <div class="contaienr">
-        <div class="row">
-        <h2>Третий уровень</h2>
-        </div>
-        <div class="ball">Баллы:<label id="lblScore"></label>
-        </div>
-        <div class="task">
-            <p>В угловых клетках квадрата 3 х 3 клеточки записаны числа 1, 8, 8, 6 так, как показано на рисунке.<br><br> Можно ли в пустые клетки вписать некоторые числа (в каждую клетку – одно число) так, чтобы сумма чисел во всех четырёх угловых квадратах 2 х 2 была одна и та же?<br>В ответ запишите слово "Да" или "Нет"</p>
-            <img src="img/task1.png" width="160" height="160">
-    </div>
-    <form action="" method="get">
-        <input id="answer" placeholder="Ваш ответ"  type="answer"><br><br>
-        <input id="button"  type="button" value="Ответить">
-    </form>        
-    </div>
-    
+            <div class="container-fluid">
+        <div class="text">
+            <h3>Ответ неверный!</h3>
+            <div class="ball">Баллы:<label id="lblScore"></label></div>
+        <p>Хочешь попробовать свои силы на фиолетовом уровне?</p>
+            <button id="btnOk" class="btn btnConf" >ДА</button>
+            <button id="btnNo" class="btn btnNope" >Нет</button>
+            <p></p>
+       </div>
+
+      </div>
     </header>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -62,42 +59,30 @@
   <script type="text/javascript" src="js/fm.revealator.jquery.js"></script>
   
   <script>new WOW().init();</script>
+  
 
-  <script type="text/javascript">
-    const answ = 'Нет';
-    const nul = '';
-    var transport = window.location.hash.substring(1);
-    let Score = Number(transport);
-    function GetIntRandom(min,max){
-    return Math.floor(Math.random() * (max-min+1))+min;
+                <!--Рандом уровня для фиолетового-->
+<script type="text/javascript">
+        var Score = window.location.hash.substring(1);
+        function GetIntRandom(min,max){
+        return Math.floor(Math.random() * (max-min+1))+min;
         }
-        $('#button').click(function(){
-            if($('#answer').val()==answ){
-                Score = Score+5;
-                window.location.href = 'transportR3.html' + '#' + Score;
-                }
-            
-                else if($('#answer').val()==nul){
-                Swal.fire({
-                title: '<p>'+'Введи ответ!'+'</p>',
-                confirmButtonColor: '#c8293f',
-                allowOutsideClick:false,
-                customClass: {
-                title: 'format-null',
-                confirmButton:'format-ok-null',
-                }
-                });
-                }
-            
-                else{
-                window.location.href = 'transportRd3.html' + '#' + Score;
-                }
-                });
+    $('#btnOk').click(function(){
+     window.location.href = GetIntRandom(51,55)/10+'.P.html' + '#' + Score;  
+    });
+</script>
+                        <!--Переход на главную-->
+<script type="text/javascript">
+    $('#btnNo').click(function(){
+     window.location.href = 'index.html';  
+    });
 </script>
 
-  <script>
+
+   <script type="text/javascript">
+// Считывание данных из переменной Score и показ их на странице
       $(document).ready(function() {
-      var lblScore = document.getElementById('lblScore');
+      var lblScore = document.getElementById("lblScore");
       lblScore.innerHTML = Score;
       });
       </script>
