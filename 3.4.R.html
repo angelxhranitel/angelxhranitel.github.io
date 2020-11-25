@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/levels.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <title>Game</title>
+  </head>
+  <body>
+   <style>
+       body{
+           background-image: url(img/4.jpg);
+       }
+       .task{
+           width: 82%;
+       }
+       form{
+           margin: 10% auto 0 auto;
+       }
+	   @media screen and (max-width: 980px){
+	   .task{
+           width: 100%;
+       }
+	   }
+      </style>
+    <header>
+    <div class="contaienr">
+        <div class="row">
+        <h2>Третий уровень</h2>
+        </div>
+        <div class="ball">Баллы:<label id="lblScore"></label>
+        </div>
+        <div class="task">
+            <p>Федя и Аня играют в такую игру. У каждого из них в кармане имеется набор из 20 фишек, на каждой из которых записано некоторое число. На Фединых фишках записаны по 4 раза числа 1, 5, 6, 7 и 9, а на Аниных – 2, 3, 4, 8 и 10. Ход в этой игре заключается в следующем. Федя и Аня одновременно извлекают наудачу по одной фишке из кармана и сравнивают записанные на них числа. Тот из них, у которого число больше, вычитает из него меньшее число, результат записывает на свою фишку вместо написанного на ней числа и кладёт эту фишку обратно в карман. Фишка с меньшим числом при этом выбрасывается. Если на обеих фишках одинаковые числа, то обе фишки выбрасываются. Вслед за этим делается новый ход и т.д. Побеждает тот, у соперника которого не останется фишек.<br><br> Вычислите общую сумму чисел на фишках, оставшихся у победителя.</p>
+    </div>
+    <form action="" method="get">
+        <input id="answer" placeholder="Ваш ответ"  type="answer"><br><br>
+        <input id="button"  type="button" value="Ответить">
+    </form>        
+    </div>
+    
+    </header>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    
+    <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Progress bar -->
+  <script type="text/javascript" src="js/progressBar/dist/progressbar.js"></script>
+  <!-- ViewPortChecker -->
+  <script type="text/javascript" src="js/addons/jquery.viewportchecker.min.js"></script>
+  <!-- Animations -->
+  <script type="text/javascript" src="js/fm.revealator.jquery.js"></script>
+  
+  <script>new WOW().init();</script>
+
+  <script type="text/javascript">
+    const answ = '4';
+    const nul = '';
+    var transport = window.location.hash.substring(1);
+    let Score = Number(transport);
+    function GetIntRandom(min,max){
+    return Math.floor(Math.random() * (max-min+1))+min;
+        }
+        $('#button').click(function(){
+            if($('#answer').val()==answ){
+                Score = Score+5;
+                window.location.href = GetIntRandom(41,45)/10+'.R.html' + '#' + Score;
+                }
+            
+                else if($('#answer').val()==nul){
+                Swal.fire({
+                title: '<p>'+'Введи ответ!'+'</p>',
+                confirmButtonColor: '#c8293f',
+                allowOutsideClick:false,
+                customClass: {
+                title: 'format-null',
+                confirmButton:'format-ok-null',
+                }
+                });
+                }
+            
+                else{
+                window.location.href = 'transportR3.html' + '#' + Score;
+                }
+                });
+</script>
+
+  <script>
+      $(document).ready(function() {
+      var lblScore = document.getElementById('lblScore');
+      lblScore.innerHTML = Score;
+      });
+      </script>
+  </body>
+</html>

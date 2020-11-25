@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Selectlevel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+
+    <title>Game</title>
+  </head>
+  <body>
+    <header>
+       
+                             <!--Для компов--> 
+                             
+                             
+          <div class="container-fluid d-none d-lg-block">
+          
+           <div class="image">
+              
+               <a id="1lvlG" href="#"><img class="img-G"src="img/green1.png"></a>
+               
+               <a id="1lvlP" href="#"><img class="img-P"src="img/purple.png"></a>
+               
+               <a id="1lvlR" href="#"><img class="img-R"src="img/red1.png"></a>
+                     
+              </div>
+              
+            <div class="row">
+               <h2>Выберите уровень сложности</h2>
+            </div>
+            
+            <div class="row lvlname">
+               
+                <div class="col-lg col d-none d-lg-block easy"><p>Лёгкий</p>
+                </div>
+                <div class="col-lg col d-none d-lg-block madium">
+                    <p>Средний</p>
+                </div>
+                <div class="col-lg col d-none d-lg-block hard">
+                    <p>Сложный</p>
+                </div>
+              </div>
+           </div>
+                               
+                                <!--Для телефонов-->
+                                
+                                
+                 <div class="container-fluid d-lg-none">
+            
+            <div class="imgM">
+            
+                <a id="MlvlG" href="#"><div class="img-G img"></div></a>
+
+                <a id="MlvlP" href="#"><div class="img-P img"></div></a>
+
+                <a id="MlvlR" href="#"><div class="img-R img"></div></a>
+                
+            </div>
+                     
+                      <div class="row">
+                <h2>Выберите уровень сложности</h2>
+            </div>
+           </div>
+    </header>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Progress bar -->
+  <script type="text/javascript" src="js/progressBar/dist/progressbar.js"></script>
+  <!-- ViewPortChecker -->
+  <script type="text/javascript" src="js/addons/jquery.viewportchecker.min.js"></script>
+  <!-- Animations -->
+  <script type="text/javascript" src="js/fm.revealator.jquery.js"></script>
+  
+  <script>new WOW().init();</script>
+    
+							<!--Для компов-->
+  
+          <!--Случайный выбор задания для зелёной дорожки-->
+  
+  <script type="text/javascript">
+        function GetIntRandom(min,max){
+        return Math.floor(Math.random() * (max-min+1))+min;
+        }
+       document.getElementById('1lvlG').addEventListener('click',function(){
+    location.href = GetIntRandom(11,15)/10+'.G.html';
+       });
+</script>
+
+        <!--Случайный выбор задания для фиолетовой дорожки-->
+
+
+
+<script type="text/javascript">
+ 
+        function GetIntRandom(min,max){
+            return Math.floor(Math.random() * (max-min+1))+min;
+        }
+       document.getElementById('1lvlP').addEventListener('click',function(){
+            location.href = GetIntRandom(11,15)/10+'.P.html';
+       });
+</script>
+
+
+          
+           <!--Случайный выбор задания для красной дорожки-->
+
+<script type="text/javascript">
+ 
+        function GetIntRandom(min,max){
+            return Math.floor(Math.random() * (max-min+1))+min;
+        }
+       document.getElementById('1lvlR').addEventListener('click',function(){
+            location.href = GetIntRandom(11,15)/10+'.R.html';
+       });
+</script>
+ 
+							<!-- Для мобилок-->
+ 
+   <script type="text/javascript">
+        function GetIntRandom(min,max){
+        return Math.floor(Math.random() * (max-min+1))+min;
+        }
+       document.getElementById('MlvlG').addEventListener('click',function(){
+    location.href = GetIntRandom(11,15)/10+'.G.html';
+       });
+</script>
+
+        <!--Случайный выбор задания для фиолетовой дорожки-->
+
+
+
+<script type="text/javascript">
+ 
+        function GetIntRandom(min,max){
+            return Math.floor(Math.random() * (max-min+1))+min;
+        }
+       document.getElementById('MlvlP').addEventListener('click',function(){
+            location.href = GetIntRandom(11,15)/10+'.P.html';
+       });
+</script>
+
+
+          
+           <!--Случайный выбор задания для красной дорожки-->
+
+
+<script type="text/javascript">
+ 
+        function GetIntRandom(min,max){
+            return Math.floor(Math.random() * (max-min+1))+min;
+        }
+       document.getElementById('MlvlR').addEventListener('click',function(){
+            location.href = GetIntRandom(11,15)/10+'.R.html';
+       });
+</script>
+  </body>
+</html>

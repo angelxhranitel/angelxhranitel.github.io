@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/levels.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <title>Game</title>
+    
+  </head>
+  <body>
+   <style>
+       body{
+           background-image: url(img/2.jpg);
+       }
+      </style>
+    <header>
+    <div class="contaienr">
+        <div class="row">
+        <h2>Пятый уровень</h2>
+        </div>
+        <div class="ball">Баллы:<label id="lblScore"></label>
+        </div>
+        <div class="task">
+            <p>Баба-Яга варит приворотное зелье. Из колбы, в которой находится 10 столовых ложек волшебного нектара, необходимо необходимо налить в котелок с зельем 5 таких ложек одной порцией. У Бабы-Яги есть две плошки: в одну помещается 3 столовых ложки нектара, а во вторую - 4.<br><br>Какое минимальное количество переливаний сделает Баба-Яга, чтоб приготовить зелье?</p>
+            
+    </div>
+    <div class="button">
+    
+    <a id="help" href="#" onclick="Swal.fire({
+      allowOutsideClick:false,
+      imageUrl: 'img/5.1.G.png',
+      confirmButtonColor: '#00ff00',
+})">Подсказка</a>
+    
+    </div>
+    <form >
+        <input id="answer" placeholder="Ваш ответ"  type="answer"><br><br>
+        <input id="button"  type="button" value="Ответить">
+    </form>        
+    </div>
+    
+    </header>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    
+    <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Progress bar -->
+  <script type="text/javascript" src="js/progressBar/dist/progressbar.js"></script>
+  <!-- ViewPortChecker -->
+  <script type="text/javascript" src="js/addons/jquery.viewportchecker.min.js"></script>
+  <!-- Animations -->
+  <script type="text/javascript" src="js/fm.revealator.jquery.js"></script>
+  
+  <script>new WOW().init();</script>
+  
+
+ <script type="text/javascript">
+    const answ = '5';
+    const nul = '';
+    var transport = window.location.hash.substring(1);
+    let Score = Number(transport);
+        $('#button').click(function(){
+            if($('#answer').val()==answ){
+                Score = Score+2;
+                //вывод Score на экран
+                lblScore = document.getElementById("lblScore");
+                lblScore.innerHTML = Score;
+                //передача Score другой странице и переход на неё
+                Swal.fire({
+                imageUrl: '../img/vik.gif',
+                imageWidth: 450,
+                imageHeight: 200,
+                background:'#000000',
+                confirmButtonColor: '#800080',
+                title:'<h3>'+'Попробуй ещё раз, ты можешь лучше!'+'</h3>',
+                html: '<p>'+'Баллы: '+Score+'</p>',
+                confirmButtonColor: '#800080',
+                confirmButtonText: '<a id="sweeta" href="index.html">На главную</a>',
+                focusConfirm:false,
+				allowOutsideClick:false,
+                customClass:{
+                popup: 'format-t',
+                title: 'format-h',
+                confirmButton:'format-ok',
+                }
+                });
+                }
+                else if($('#answer').val()==nul){
+                Swal.fire({
+                title: '<p>'+'Введи ответ!'+'</p>',
+                confirmButtonColor: '#00ff00',
+                allowOutsideClick:false,
+                customClass: {
+                title: 'format-null',
+                confirmButton:'format-ok-null',
+                }
+                });
+                }
+            
+                else{
+                Swal.fire({
+                imageUrl: 'img/GameOver.jpg',
+                imageWidth: 450,
+                imageHeight: 180,  
+                title:'<p>'+'Баллы: '+Score+'</p>',
+                confirmButtonColor: '#615C62',
+                confirmButtonText:'<a id="false" href="Choosen%20lvl.html">Новая игра</a>',
+                allowOutsideClick:false,
+                background:'black',
+                customClass: {
+                title: 'format-f',
+                confirmButton:'format-next',
+                }
+                });
+                }
+                });
+</script>
+   <script>
+// Считывание данных из переменной Score и показ их на странице
+      $(document).ready(function() {
+      var lblScore = document.getElementById("lblScore");
+      lblScore.innerHTML = Score;
+      });
+      </script>
+  </body>
+</html>
