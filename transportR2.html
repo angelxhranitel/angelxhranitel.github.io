@@ -20,7 +20,7 @@
 			  width: 60%;
 		  }
 		  .btn{
-			  width: 350px;
+			  width: 50%;
 			  left: 0%;
 			  margin:5% auto 0 auto;
 			  
@@ -29,18 +29,34 @@
 		   body{
 			    background-image: url('img/red1.png');
 			}
+		   .btn{
+			   text-align: center;
+			}
+		   .text{
+			   width: 100%;
+			   margin: 40% auto 0 auto;
+		   }
 	   }
    </style>
     <header>
-            <div class="container-fluid">
+      <div class="container-fluid d-none d-lg-block">
         <div class="text">
             <h3>Правильно!</h3>
             <div class="ball">Баллы:<label id="lblScore"></label></div>
             <button id="btnOk" class="btn btnConf" >Следующий уровень</button>
             <p></p>
-       </div>
-
+          </div>
       </div>
+      
+       <div class="container-fluid d-lg-none">
+        <div class="text">
+            <h3>Правильно!</h3>
+            <div class="ball">Баллы:<label id="lblScore"></label></div>
+            <button id="btnOk" class="btn btnConf" >Дальше</button>
+            <p></p>
+          </div>
+		</div>
+      
     </header>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
