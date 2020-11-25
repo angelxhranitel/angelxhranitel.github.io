@@ -39,6 +39,7 @@
 	   }
    </style>
     <header>
+							<!--Для компьютеров-->
       <div class="container-fluid d-none d-lg-block">
         <div class="text">
             <h3>Правильно!</h3>
@@ -48,11 +49,13 @@
           </div>
       </div>
       
+							<!--Для телефонов-->
+      
        <div class="container-fluid d-lg-none">
         <div class="text">
             <h3>Правильно!</h3>
             <div class="ball">Баллы:<label id="lblScore"></label></div>
-            <button id="btnOk" class="btn btnConf" >Дальше</button>
+            <button id="btnOkM" class="btn btnConf" >Дальше</button>
             <p></p>
           </div>
 		</div>
@@ -84,13 +87,24 @@
   <script>new WOW().init();</script>
   
 
-                <!--Рандом уровня для красного-->
+                <!--Рандом уровня для красного для компьютеров-->
 <script type="text/javascript">
         var Score = window.location.hash.substring(1);
         function GetIntRandom(min,max){
         return Math.floor(Math.random() * (max-min+1))+min;
         }
     $('#btnOk').click(function(){
+     window.location.href = GetIntRandom(21,25)/10+'.R.html' + '#' + Score;  
+    });
+</script>
+					<!--рандом красного для телефонов-->
+
+<script type="text/javascript">
+        var Score = window.location.hash.substring(1);
+        function GetIntRandom(min,max){
+        return Math.floor(Math.random() * (max-min+1))+min;
+        }
+    $('#btnOkM').click(function(){
      window.location.href = GetIntRandom(21,25)/10+'.R.html' + '#' + Score;  
     });
 </script>
