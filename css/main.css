@@ -1,5 +1,5 @@
 header {
-    background: no-repeat url('../img/1.jpg') center top / cover;
+    background: no-repeat url('img/1.jpg') center top / cover;
     height: 100vh;
     width: 100%;
     overflow: auto;
