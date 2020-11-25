@@ -54,7 +54,7 @@
        <div class="container-fluid d-lg-none">
         <div class="text">
             <h3>Правильно!</h3>
-            <div class="ball">Баллы:<label id="lblScore"></label></div>
+            <div class="ball">Баллы:<label id="lblScoreM"></label></div>
             <button id="btnOkM" class="btn btnConf" >Дальше</button>
             <p></p>
           </div>
@@ -108,7 +108,7 @@
      window.location.href = GetIntRandom(41,45)/10+'.R.html' + '#' + Score;  
     });
 </script>
-                        <!--Переход на главную-->
+                        <!--Для компьютеров-->
 
 
    <script type="text/javascript">
@@ -116,6 +116,16 @@
       $(document).ready(function() {
       var lblScore = document.getElementById("lblScore");
       lblScore.innerHTML = Score;
+      });
+      </script>
+      
+<!--      Для телефонов-->
+        
+         <script type="text/javascript">
+// Считывание данных из переменной Score и показ их на странице
+      $(document).ready(function() {
+      var lblScoreM = document.getElementById("lblScoreM");
+      lblScoreM.innerHTML = Score;
       });
       </script>
   </body>
