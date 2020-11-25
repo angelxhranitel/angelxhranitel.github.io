@@ -1,0 +1,184 @@
+h2{
+    margin: 2% auto 0 auto;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.ball{
+    text-align: left;
+    position: absolute;
+    font-family:  'Press Start 2P', cursive;
+    font-size: 25px;
+    left: 2%;
+    margin: -2.5% auto 0 auto;
+    
+}
+
+.task{
+    margin: 3% auto 0 auto;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    width: 70%;
+    background-color: rgba(1,1,1,0.3);
+    color: aliceblue;
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form{
+    text-align: center;
+    margin:  5% auto 0 auto;
+    position: relative;
+    font-family:  'Press Start 2P', cursive;
+}
+
+input{
+        border-radius: 10px;
+}
+
+input:focus{
+    outline: none;
+}
+
+input[type=submit]:hover{
+    color:#32CD32;
+}
+
+input[type=answer]{
+    text-align: center;
+}
+
+.button{
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    position: relative;
+    margin: 5% auto 0 auto;
+    font-size: 120%;
+    background-color: azure;
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+a{
+    color: black;
+}
+a:hover{
+    color: #32CD32;
+    text-decoration: none;
+}
+#sweeta{
+    color: aliceblue;
+}
+#sweeta:hover{
+    color: aliceblue;
+}
+#false{
+    color:aliceblue;
+    font-family: 'Press Start 2P', cursive;
+}
+#false:hover{
+    color: aliceblue;
+}
+.format-t p {
+  font-size: 25px;
+ font-family: 'Press Start 2P', cursive;
+    color: aliceblue;
+}
+.format-f p {
+  font-size: 25px;
+    font-family: 'Press Start 2P', cursive;
+}
+.format-f p{
+    color: aliceblue;
+}
+
+.format-h h3{ 
+    font-size: 25px;
+    font-family: 'Press Start 2P', cursive;
+    color: aliceblue;
+}
+.format-null p{
+    font-size: 26px;
+}
+@media screen and (max-width: 980px) {
+html{
+width: 100%;
+height: 100%;
+max-width: 100%;
+overflow-x: hidden;
+overflow-y: auto;
+}
+
+body
+{
+width: 100%;
+max-width: 100%;
+overflow-x: hidden;
+overflow-y: auto;
+}
+h2{
+font-size: 24px;
+padding: 15px;
+}
+.task{
+margin: 3% auto 0 auto;
+text-align: center;
+font-family: 'Press Start 2P', cursive;
+width: 100%;
+background-color: rgba(1,1,1,0.5);
+color: aliceblue;
+border-radius: 0px;
+padding: 15px;
+}
+form{
+margin: 10% auto 0 auto;
+}
+.button{
+margin: 10% auto 0 auto;
+}
+input[type=answer]{
+width: 85%
+}
+.ball{
+position: relative;
+margin: 1% auto 0 auto;
+text-align: center;
+font-size: 24px;
+}
+.format-ok{
+width: 50%;
+text-align: center;
+}
+.format-no{
+width: 30%;
+}
+.format-next{
+width: 120%;
+}
+.format-null p{
+font-size: 20px;
+}
+.format-ok-null{
+width: 30%;		
+}
+.format-f p{
+font-size: 16px;
+}
+.format-t p{
+font-size: 20px;
+}
+#false{
+font-size: 16px;
+}
+}

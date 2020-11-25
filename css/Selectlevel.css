@@ -1,0 +1,112 @@
+header{
+    height: 100%;
+    width: 100%;
+}
+h2{
+    margin: 2% auto 0 auto;
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+}
+.col{
+    text-align: center;
+    margin-top: 41%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: aliceblue;
+}
+img{
+    position: absolute;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+img:hover{
+        -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.img-G{
+height:100vh;
+width: 33.333333333%;
+position: absolute;
+top:0;
+left: 0;
+}
+
+
+.img-P{
+height:100vh;
+position: absolute;
+top:0;
+width: 33.3333333%;
+left:33.33333333%
+}
+
+.img-R{
+height:100vh;
+position:absolute;
+top:0;
+right: 0;
+width: 33.33333333%;
+}
+
+@media screen and (max-width: 980px){
+    h2{
+        text-align: center;
+        position: relative;
+        margin: 2% auto 0 auto;
+        font-size: 20px;
+        padding: 12px;
+    }
+    .img-G{
+    background-image: url('../img/2.jpg');
+    background-size: cover;
+    height:33.333333333%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    }
+    .img-P{
+    background-image: url('../img/3.jpg');
+    background-size: cover;
+    height:33.333333333%;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top:33.333333333%;
+    }
+
+    .img-R{
+    background-image: url('../img/4.jpg');
+    background-size: cover;
+    height:33.333333333%;
+    position:absolute;
+    width: 100%;
+    top:66.666666666%;
+    }
+    .text{
+        font-size: 22px;
+        color: aliceblue;
+        font-family: 'Press Start 2P', cursive;
+        text-align: center;
+        position: relative;
+    }
+    .easy{
+        margin: 30% auto 0 auto;
+    }
+    .medium{
+        margin: 55% auto 0 auto;
+    }
+    .hard{
+        margin: 55% auto 0 auto;
+    }
+}

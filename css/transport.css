@@ -1,0 +1,73 @@
+body{
+    background-image: url('../img/transport.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center/relative;
+}
+
+.text{
+    background-color:rgba(1, 1, 1, 0.4);
+    width: 70%;
+    border-radius: 20px;
+    text-align: center;
+    margin: 10% auto 0 auto;
+}
+p{
+    font-family:'Press Start 2P', cursive;
+    font-size: 20px;
+    padding: 20px;
+    color: aliceblue;
+    text-shadow: 1px 1px 2px black, 0 0 1em black;
+}
+h3{
+    font-family:'Press Start 2P', cursive;
+    padding: 15px;
+    color: aliceblue;
+    text-shadow: 1px 1px 2px black, 0 0 1em black;
+}
+.ball{
+    font-family:'Press Start 2P', cursive;
+    font-size: 26px;
+    padding: 10px;
+    color: aliceblue;
+    text-shadow: 1px 1px 2px black, 0 0 1em black;
+    
+}
+.btn{
+    position: relative;
+    margin: 1% auto 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100px;
+    color: aliceblue;
+    font-family:'Press Start 2P', cursive;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+    
+}
+.btn:hover{
+    text-shadow: 1px 1px 2px black, 0 0 1em black;
+    box-shadow: 1px 1px 2px black, 0 0 1em black;
+}
+.btnConf{
+    background:chartreuse;
+    left: -5%;
+}
+.btnNope{
+    background: red;
+    left: 5%;
+}
+@media screen and (max-width: 980px){
+	body{
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center/relative;
+	}
+	.text{
+		width: 100%;
+		margin-top:30%;
+	}
+}
