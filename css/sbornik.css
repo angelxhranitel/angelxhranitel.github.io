@@ -48,3 +48,14 @@ b1{
 .footer{
     height: 70px;
 }
+@media screen and (max-width: 980px){
+    h2{
+        font-size: 26px;
+    }
+    .task{
+        width: 100%;
+    }
+    h3{
+        width: 35%;
+    }
+}
