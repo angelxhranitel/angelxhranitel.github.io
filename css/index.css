@@ -62,7 +62,7 @@ h6{
 .people{
     margin: 2% auto 0 auto;
 	margin-left: 2%;
-	position: absolute;
+	position: relative ;
 }
 @media screen and (max-width: 980px) {
 
@@ -83,9 +83,6 @@ h6{
     }
     .col{
         font-size:16px;
-    }
-    .people{
-        margin-top: -30%;
     }
     .footer{
         height: 100px;
