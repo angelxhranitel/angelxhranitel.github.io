@@ -1,0 +1,90 @@
+header {
+    background: url(../img/1.jpg);
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    background-attachment: fixed;
+    background-position: center/relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a{
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 18px;
+    color: aliceblue;
+}
+
+a:hover{
+    text-decoration: none;
+        color: aliceblue;
+}
+
+h2{
+    margin: 2% auto 0 auto;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    width: 100%;
+}
+
+h6{
+    margin: 5% auto 0 auto;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    padding: 20px;
+    color:azure;
+
+}
+.col{
+    width: 200px;
+    text-align: center;
+    position: relative;
+    margin: 4% auto 0 auto;
+    background-color: rgba(93, 206, 198,0.8);
+    opacity: 0.8;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+}
+.col:hover{
+    text-shadow: 1px 1px 2px black, 0 0 1em black;
+    box-shadow: 1px 1px 2px black, 0 0 1em black;
+}
+.text{
+    text-align: center;
+    background-color: rgba(93, 206, 198,0.8);
+    text-decoration-color: aliceblue;
+
+    border-radius: 40px;
+    margin-top: -1%;
+}
+.people{
+    margin: 2% auto 0 auto;
+	margin-left: 2%;
+	position: absolute;
+}
+@media screen and (max-width: 980px) {
+
+    h2{
+      margin-top: 5%;
+      font-size: 16px;
+    }
+    
+    h6{
+      font-size: 12px;
+      
+    }
+    b{
+      font-size: 17px;
+    }
+    .text{
+        width: 100%;   
+    }
+    .col{
+        font-size:16px;
+    }
+    .footer{
+        height: 100px;
+    }
+}
